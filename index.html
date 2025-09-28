@@ -39,7 +39,7 @@
       position: absolute;
       font-size: 3em;
       opacity: 0;
-      animation: slideInOut 8s infinite;
+      animation: slideInOut 4s linear forwards;
       left: -100px;
     }
     @keyframes slideInOut {
@@ -47,36 +47,37 @@
         transform: translateX(-100px) scale(0.5);
         opacity: 0;
       }
-      15% {
+      20% {
         transform: translateX(25vw) scale(1);
         opacity: 0.8;
       }
-      30% {
+      40% {
         transform: translateX(50vw) scale(1.3);
         opacity: 1;
       }
-      45% {
+      60% {
         transform: translateX(75vw) scale(1);
         opacity: 0.8;
       }
-      60% {
+      80% {
         transform: translateX(100vw) scale(0.5);
         opacity: 0;
       }
       100% {
         transform: translateX(100vw) scale(0.5);
         opacity: 0;
+        display: none;
       }
     }
-    /* Individual animation delays for each emoji - 2 second intervals */
+    /* Individual animation delays for each emoji - 4 second animation with 4 second intervals */
     .header-animated-icons span:nth-child(1) { animation-delay: 0s; }
-    .header-animated-icons span:nth-child(2) { animation-delay: 2s; }
-    .header-animated-icons span:nth-child(3) { animation-delay: 4s; }
-    .header-animated-icons span:nth-child(4) { animation-delay: 6s; }
-    .header-animated-icons span:nth-child(5) { animation-delay: 8s; }
-    .header-animated-icons span:nth-child(6) { animation-delay: 10s; }
-    .header-animated-icons span:nth-child(7) { animation-delay: 12s; }
-    .header-animated-icons span:nth-child(8) { animation-delay: 14s; }
+    .header-animated-icons span:nth-child(2) { animation-delay: 4s; }
+    .header-animated-icons span:nth-child(3) { animation-delay: 8s; }
+    .header-animated-icons span:nth-child(4) { animation-delay: 12s; }
+    .header-animated-icons span:nth-child(5) { animation-delay: 16s; }
+    .header-animated-icons span:nth-child(6) { animation-delay: 20s; }
+    .header-animated-icons span:nth-child(7) { animation-delay: 24s; }
+    .header-animated-icons span:nth-child(8) { animation-delay: 28s; }
     .webswan-header-text {
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       color: #fff; font-family: 'Pacifico', cursive; width: 100vw; padding: 0; box-sizing: border-box;
@@ -548,6 +549,8 @@
       </div>
     </div>
   </div>
+  
+  <!-- The rest of your HTML content remains exactly the same -->
   <div class="main-content">
     <div class="calendar-actions">
       <button id="adminLoginBtn" type="button">Admin Login</button>
